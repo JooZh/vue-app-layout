@@ -6,18 +6,18 @@ let routes = [];
 
 // 创建tab页面子路由列表
 let tabBar = [];
-config.barPages.forEach(page => {
+config.barPages.forEach(path => {
   tabBar.push({
-    path: page.router,
-    name: page.router,
-    component: require(`app/${page.path}`).default
+    path: `/${path}`,
+    name: `/${path}`,
+    component: require(`app/${path}`).default
   })
 });
 
 // 创建tab页面路由
 let tabRouter = {
   path: '/',
-  component: require(`../components/TabCon`).default ,
+  component: require(`../components/TabCon`).default,
   redirect: tabBar[0].path,
   children: tabBar
 }
@@ -27,11 +27,11 @@ routes.push(tabRouter);
 
 // 添加其他页面路由
 let pages = config.pages.concat([config.commonPage])
-pages.forEach(page => {
+pages.forEach(path => {
   routes.push({
-    path: page.router,
-    name: page.router,
-    component: require(`app/${page.path}`).default
+    path: `/${path}`,
+    name: `/${path}`,
+    component: require(`app/${path}`).default
   })
 });
 

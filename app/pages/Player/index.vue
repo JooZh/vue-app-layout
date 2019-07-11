@@ -1,44 +1,18 @@
 <template>
-  <div>
-    <div class="sub-view">
-      <Header :title="'公共页面'" :show="true" :bg="true" :border="true" :music="false"></Header>
-      <div class="container">
-        <div class="bd">
-          <div class="play"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <page title="公共页面">
+    <div class="play"></div>
+  </page>
 </template>
 
 <script>
-import Header from '../../layout/Header/index'
 export default {
   name: 'player',
-  components: {
-    Header
-  }
+
 }
 </script>
 
 <style lang="stylus">
 @import '../../assets/css/mxin';
-.container
-  width 100%
-  position absolute
-  top 40px
-  left 0
-  bottom 0
-  right 0
-  .bd
-    position absolute
-    top 0
-    left 0
-    bottom 0
-    right 0
-    display flex
-    justify-content center
-    align-items center
     .play
       width 250px
       height 250px

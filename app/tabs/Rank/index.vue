@@ -1,20 +1,13 @@
 <template>
-  <div>
-    <div class="view">
-      <Header :title="'排行'" :show="false"></Header>
-      <div class="bd">ranking</div>
-    </div>
-  </div>
+  <Page title="rank" isTab>
+
+  </Page>
 </template>
 
 <script>
-import Header from '../../layout/Header/index'
 
 export default {
   name: 'rank',
-  components: {
-    Header
-  },
   data () {
     return {}
   },
@@ -25,6 +18,6 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @import '../../assets/css/mxin';
 </style>

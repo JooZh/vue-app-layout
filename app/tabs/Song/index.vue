@@ -1,34 +1,41 @@
 <template>
-  <div>
-    <div class="view">
-      <Header :title="'歌单'" :show="false"></Header>
-      <div class="bd">song</div>
-    </div>
-  </div>
+  <Page
+    isTab
+    title="song"
+    :pullRefresh="pullRefresh"
+    :reachBottom="reachBottom"
+    :onScroll="onScroll">
+    <div>sfafaf</div>
+    <div class="num" slot="position">{{y}}</div>
+  </Page>
 </template>
 
 <script>
-import Header from '../../layout/Header/index'
 export default {
   name: 'song',
-  components: {
-    Header
-  },
   data () {
-    return {}
+    return {
+      y:0
+    }
   },
-  mounted () {
-
-  },
-  activated () {
-
-  },
+  mounted () {},
   methods: {
+    pullRefresh(){
 
+    },
+    reachBottom(){
+
+    },
+    onScroll(e){
+      this.y = e.y
+    }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
-
+<style lang="stylus">
+.num
+  position absolute
+  left 10px
+  top 10px
 </style>

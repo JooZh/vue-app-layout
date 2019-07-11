@@ -4,12 +4,11 @@
   "description": "A template that simulates app page switching and caching effects",
   "private": false,
   "scripts": {
-    "dev": "cd compile && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "npm run build:src && npm run build:examples",
     "build:src": "node build/build.js",
-    "build:examples": "cd examples && node build/build.js",
-    "compile": "node builds/index.js"
+    "build:examples": "cd examples && node build/build.js"
   },
   "main": "dist/vue-app-effect.umd.js",
   "module": "dist/vue-app-effect.esm.js",

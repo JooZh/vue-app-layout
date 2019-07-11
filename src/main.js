@@ -6,7 +6,7 @@ import FastClick from 'fastclick'
 import router from './router'
 import config from 'app/app.json'
 import VueAppScroller from 'vue-app-scroller';
-import VnodeCache from '../../src/index'
+import VnodeCache from '../effect/index'
 
 require(`app/app.js`);
 
@@ -18,8 +18,8 @@ Vue.use(VueAppScroller);
 
 Vue.use(VnodeCache, {
   router,
-  tabbar: config.barPages.map(page => page.router),
-  common: config.commonPage.router
+  tabbar: config.barPages.map(item=>`/${item}`),
+  common: '/'+config.commonPage
 })
 
 window.vm = new Vue({

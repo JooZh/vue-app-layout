@@ -1,33 +1,18 @@
 <template>
-  <div>
-    <div class="sub-view">
-      <Header :title="'视频详情'" :show="true" :bg="true" :border="true"></Header>
-      <div class="container">
-        <div class="bd">
-          <vue-app-scroller
-            :scrollingY="true"
-            :data="items">
-            <div class='lists'>
-              <div class="content">当前是{{name}}详情页{{id}}</div>
-              <div class='info' v-for="(item,index) in items" :key="index">
-                <p class="info-button" @click='goDetailSinger(id+1,`Singer`)'>Singer详情页{{id+1}}</p>
-                <p class="info-button" @click='goDetailMv(id+1,`MV`)'>MV详情页{{id+1}}</p>
-              </div>
-            </div>
-          </vue-app-scroller>
-        </div>
+  <page title="视频详情">
+    <div class='lists'>
+      <div class="content">当前是{{name}}详情页{{id}}</div>
+      <div class='info' v-for="(item,index) in items" :key="index">
+        <p class="info-button" @click='goDetailSinger(id+1,`Singer`)'>Singer详情页{{id+1}}</p>
+        <p class="info-button" @click='goDetailMv(id+1,`MV`)'>MV详情页{{id+1}}</p>
       </div>
     </div>
-  </div>
+  </page>
 </template>
 
 <script>
-import Header from 'app/layout/Header/index'
 export default {
   name: 'mv-detail',
-  components: {
-    Header
-  },
   data () {
     return {
       id: 0,
@@ -47,13 +32,13 @@ export default {
   methods: {
     goDetailMv (index, name) {
       this.$vueAppEffect.next({
-        path:`/movie-detail/${index}`,
+        path:`/pages/MovieDetail/index/${index}`,
         params:{ id: index, name: name }
       })
     },
     goDetailSinger (index, name) {
       this.$vueAppEffect.next({
-        path: `/singer-detail/${index}`,
+        path: `/pages/SingerDetail/index/${index}`,
         params: { id: index, name: name }
       })
     }
@@ -63,19 +48,6 @@ export default {
 
 <style lang="stylus">
 @import '../../assets/css/mxin'
-.container
-  width 100%
-  position absolute
-  top 40px
-  left 0
-  bottom 0
-  right 0
-  .bd
-    position absolute
-    top 0
-    left 0
-    bottom 0
-    right 0
     .lists
       margin 0px 10px 20px 10px
       padding-top 20px

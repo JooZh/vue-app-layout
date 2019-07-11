@@ -1,36 +1,21 @@
 <template>
-<div>
-  <div class="view singer-container" v-show="show">
-    <Header :title="'歌手'" :show="false" :bg="true" :border="true"></Header>
-    <div class="bd">
-      <vue-app-scroller
-        :scrollingY="true"
-        :mousewheel="true"
-        :data="items">
-        <div class='mvlist'>
-          <div class='list' v-for="(item,index) in items" :key="index">
-            <div class='detail' @click='goDetail(index+1,`Singer`)'>
-              <img class='img' :src="defaultImg">
-              <div class="title-box">
-                <div class='title'>vue-app-effect Sge {{index+1}}</div>
-              </div>
-              <div class='date'>播放: {{index+1}}.99 万</div>
-            </div>
+  <Page title="歌手" isTab>
+    <div class='mvlist'>
+      <div class='list' v-for="(item,index) in items" :key="index">
+        <div class='detail' @click='goDetail(index+1,`Singer`)'>
+          <img class='img' :src="defaultImg">
+          <div class="title-box">
+            <div class='title'>vue-app-effect Sge {{index+1}}</div>
           </div>
+          <div class='date'>播放: {{index+1}}.99 万</div>
         </div>
-      </vue-app-scroller>
+      </div>
     </div>
-  </div>
-</div>
+  </Page>
 </template>
-
 <script>
-import Header from '../../layout/Header/index'
 export default {
   name: 'singer',
-  components: {
-    Header
-  },
   data () {
     return {
       show:false,
@@ -49,7 +34,7 @@ export default {
   methods: {
     goDetail (index, name) {
       this.$vueAppEffect.next({
-        path:`/singer-detail/${index}`,
+        path:`/pages/SingerDetail/index/${index}`,
         params:{ id: index, name: name }
       })
     }
@@ -59,7 +44,6 @@ export default {
 
 <style lang="stylus">
 @import '../../assets/css/mxin'
-.singer-container
   .mvlist
     color:rgba(255,255,255,0.5)
     display flex
@@ -91,5 +75,4 @@ export default {
             font-size 20px
             position relative
             top -1px
-
 </style>

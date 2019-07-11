@@ -1,31 +1,13 @@
 {
   "pages":[
-    {
-      "router":"/movie-detail",
-      "path":"pages/MovieDetail/index"
-    },{
-      "router":"/singer-detail",
-      "path":"pages/SingerDetail/index"
-    }
+    "pages/MovieDetail/index",
+    "pages/SingerDetail/index"
   ],
   "barPages":[
-    {
-      "router":"/movie",
-      "path":"tabs/Movie/index"
-    },
-    {
-      "router":"/rank",
-      "path":"tabs/Rank/index"
-    },{
-      "router":"/singer",
-      "path":"tabs/Singer/index"
-    },{
-      "router":"/song",
-      "path":"tabs/Song/index"
-    }
+    "tabs/Movie/index",
+    "tabs/Rank/index",
+    "tabs/Singer/index",
+    "tabs/Song/index"
   ],
-  "commonPage":{
-    "router":"/player",
-    "path":"pages/Player/index"
-  }
+  "commonPage":"pages/Player/index"
 }
