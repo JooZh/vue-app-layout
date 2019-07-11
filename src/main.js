@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import FastClick from 'fastclick'
-import router from './router'
+import router from './router.js'
 import config from 'app/app.json'
 import VueAppScroller from 'vue-app-scroller';
-import VnodeCache from '../effect/index'
+import VnodeCache from 'vue-app-effect'
 
 require(`app/app.js`);
 

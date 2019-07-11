@@ -17,7 +17,7 @@ config.barPages.forEach(path => {
 // 创建tab页面路由
 let tabRouter = {
   path: '/',
-  component: require(`../components/TabCon`).default,
+  component: require(`./TabCon`).default,
   redirect: tabBar[0].path,
   children: tabBar
 }
