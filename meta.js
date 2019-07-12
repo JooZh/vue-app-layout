@@ -155,7 +155,7 @@ module.exports = {
           short: 'no',
         },
       ],
-    },
+    }
   },
   filters: {
     '.eslintrc.js': 'lint',
@@ -192,5 +192,5 @@ module.exports = {
     } else {
       printMessage(data, chalk)
     }
-  },
+  }
 }
