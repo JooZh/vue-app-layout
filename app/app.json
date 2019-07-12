@@ -9,5 +9,5 @@
     "tabs/Singer/index",
     "tabs/Song/index"
   ],
-  "commonPage":"pages/Player/index"
+  "commonPage":"pages/Common/index"
 }

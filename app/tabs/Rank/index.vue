@@ -1,6 +1,6 @@
 <template>
-  <Page title="rank" isTab>
-
+  <Page title="排行榜" isTab>
+    <!-- your codeing -->
   </Page>
 </template>
 
@@ -9,9 +9,13 @@
 export default {
   name: 'rank',
   data () {
-    return {}
+    return {
+
+    }
   },
-  mounted () {},
+  mounted () {
+
+  },
   methods: {
 
   }
@@ -19,5 +23,4 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../../assets/css/mxin';
 </style>

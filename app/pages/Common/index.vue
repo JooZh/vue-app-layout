@@ -1,5 +1,5 @@
 <template>
-  <Page title="歌手" isTab>
+  <Page title="公共页面">
     <!-- your codeing -->
   </Page>
 </template>
@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'singer',
+  name: 'common',
   data () {
     return {
 

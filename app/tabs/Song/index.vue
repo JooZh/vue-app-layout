@@ -1,41 +1,26 @@
 <template>
-  <Page
-    isTab
-    title="song"
-    :pullRefresh="pullRefresh"
-    :reachBottom="reachBottom"
-    :onScroll="onScroll">
-    <div>sfafaf</div>
-    <div class="num" slot="position">{{y}}</div>
+  <Page title="单曲" isTab>
+    <!-- your codeing -->
   </Page>
 </template>
 
 <script>
+
 export default {
   name: 'song',
   data () {
     return {
-      y:0
+
     }
   },
-  mounted () {},
+  mounted () {
+
+  },
   methods: {
-    pullRefresh(){
 
-    },
-    reachBottom(){
-
-    },
-    onScroll(e){
-      this.y = e.y
-    }
   }
 }
 </script>
 
 <style lang="stylus">
-.num
-  position absolute
-  left 10px
-  top 10px
 </style>
